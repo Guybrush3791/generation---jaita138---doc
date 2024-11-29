@@ -20,7 +20,7 @@ Attraverso il filtro ricercare la repository appena creata e clonarla nella cart
 ![[Pasted image 20241129172104.png]]
 Copiare all'interno di quella cartella tutti i file che si desidera caricare
 ![[Pasted image 20241129172224.png]]
-GitHub desktop riportera' tutti i file inseriti con eventuali modifiche
+GitHub desktop riportera' tutti i file inseriti con eventuali modifiche e definire un **Summary** (qualsiasi parola testo andra' bene)
 ![[Pasted image 20241129172307.png]]
 Accertarsi che tutti i file sono selezionati sulla sx e premere il tasto `Commit to main` e poi `Publish branch`
 ![[Pasted image 20241129172433.png]]Attendere il completamente dell'upload senza errori, eventualmente verificando sulla pagina di GitHub
