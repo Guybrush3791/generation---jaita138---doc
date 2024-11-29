@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Days/Day 1/Tipi di Dato.md",
+                "file": "Days/Day 1/Esercizi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tipi di Dato"
+              "title": "Esercizi"
             }
           }
         ]
@@ -164,8 +164,9 @@
   },
   "active": "895705f676d447ed",
   "lastOpenFiles": [
-    "JAITA138.md",
     "Days/Day 1/Tipi di Dato.md",
+    "Days/Day 1/Esercizi.md",
+    "JAITA138.md",
     "Days",
     "Days/Day 1",
     "Draw.io/Db Intro.drawio",
