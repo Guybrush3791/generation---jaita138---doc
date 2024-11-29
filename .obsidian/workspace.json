@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Days/Day 1/Esercizi.md",
-                "mode": "preview",
+                "file": "Tutorials/GitHub Desktop.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Esercizi"
+              "title": "GitHub Desktop"
             }
           }
         ]
@@ -162,8 +162,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "94a314ab9c9734fc",
+  "active": "895705f676d447ed",
   "lastOpenFiles": [
+    "JAITA138.md",
+    "Tutorials/GitHub Desktop.md",
+    "__assets/images/Screenshot from 2024-11-29 16-42-55.png",
+    "__assets/images/Screenshot from 2024-11-29 16-37-19.png",
+    "Screenshot from 2024-11-29 16-35-17.png",
+    "__assets/images/Screenshot from 2024-11-29 16-36-15.png",
+    "__assets/images",
+    "__assets",
+    "__assets/images/Screenshot from 2024-11-29 16-34-52.png",
+    "Days/Day 1/Esercizi.md",
     "Tutorials/Markdown/Mermaid/User Journey Diagram.md",
     "Tutorials/Markdown/Mermaid/Timeline.md",
     "Tutorials/Markdown/Mermaid/State diagram.md",
@@ -183,12 +193,9 @@
     "Tutorials/Markdown",
     "Tutorials",
     "Days/Day 1/Tipi di Dato.md",
-    "Days/Day 1/Esercizi.md",
-    "JAITA138.md",
     "Days",
     "Days/Day 1",
     "Draw.io/Db Intro.drawio",
-    "Draw.io",
     "Prova.md"
   ]
 }
