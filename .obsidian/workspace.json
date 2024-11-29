@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAITA138.md",
+                "file": "Days/Day 1/Tipi di Dato.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JAITA138"
+              "title": "Tipi di Dato"
             }
           }
         ]
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "path:\"Draw.io/\" ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -162,11 +162,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "94a314ab9c9734fc",
+  "active": "895705f676d447ed",
   "lastOpenFiles": [
+    "JAITA138.md",
+    "Days/Day 1/Tipi di Dato.md",
+    "Days",
+    "Days/Day 1",
     "Draw.io/Db Intro.drawio",
     "Draw.io",
-    "Prova.md",
-    "JAITA138.md"
+    "Prova.md"
   ]
 }
