@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Days/Day 1/Esercizi.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -162,8 +162,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "895705f676d447ed",
+  "active": "94a314ab9c9734fc",
   "lastOpenFiles": [
+    "Tutorials/Markdown/Mermaid/User Journey Diagram.md",
+    "Tutorials/Markdown/Mermaid/Timeline.md",
+    "Tutorials/Markdown/Mermaid/State diagram.md",
+    "Tutorials/Markdown/Mermaid/Sequence Diagram.md",
+    "Tutorials/Markdown/Mermaid/Pie.md",
+    "Tutorials/Markdown/Mermaid/Git.md",
+    "Tutorials/Markdown/Mermaid/Gantt.md",
+    "Tutorials/Markdown/Mermaid/Flow.md",
+    "Tutorials/Markdown/Mermaid/Entity Relationship.md",
+    "Tutorials/Markdown/Mermaid/Class diagrams.md",
+    "Tutorials/Markdown/Mermaid",
+    "Tutorials/Markdown/Slides/Slides demo.md",
+    "Tutorials/Markdown/Slides",
+    "Tutorials/Markdown/Attach/Markdown Linkable Note.md",
+    "Tutorials/Markdown/Attach",
+    "Tutorials/Markdown/Markdown + Obsidian.md",
+    "Tutorials/Markdown",
+    "Tutorials",
     "Days/Day 1/Tipi di Dato.md",
     "Days/Day 1/Esercizi.md",
     "JAITA138.md",
