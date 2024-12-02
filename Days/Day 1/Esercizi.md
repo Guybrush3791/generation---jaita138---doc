@@ -8,12 +8,14 @@ Definire in file di testo o pdf o excel gli attributi con relativi tipi di dato 
 - Libri
 - Membri
 - Prestiti
+#### [[gen-jaita138-tipi-di-dato-1 - es 1.pdf|Correzione]]
 
 ### Database 2
 **Catalogo di un Ristorante**:
 - Piatti
 - Ingredienti
 - Clienti
+#### [[gen-jaita138-tipi-di-dato-1 - es 2.pdf|Correzione]]
 
 ### Database 3
 **Catalogo di un Negozio di Fiori**

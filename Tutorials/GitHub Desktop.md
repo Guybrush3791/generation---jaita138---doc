@@ -10,7 +10,7 @@ Premere il tasto `Clone`
 # Creare repo esercizi
 Aprire pagina di [GitHub](https://github.com/), collegarsi con il proprio utente e selezionare la tab `Repositories`
 ![[Pasted image 20241129171552.png]]
-Creare nuovo repository **pubblica** con il tasto verde `New` in alto a dx
+Creare nuovo repository **pubblico** con il tasto verde `New` in alto a dx
 ![[Pasted image 20241129171637.png]]
 > [!attention] Controllare il nome della repo: deve **IDENTICO** a quello fornito dal docente
 

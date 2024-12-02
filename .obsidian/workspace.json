@@ -4,21 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "b94b285fe15f6e73",
+        "id": "ba5f18da87765ab9",
         "type": "tabs",
         "children": [
           {
-            "id": "895705f676d447ed",
+            "id": "aa68a275a53cc74f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JAITA138.md",
+                "file": "Days/Day 2/Esercizi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JAITA138"
+              "title": "Esercizi"
+            }
+          },
+          {
+            "id": "6bc3339a2d19c749",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Days/Day 1/Tipi di Dato.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Tipi di Dato"
             }
           }
         ]
@@ -162,10 +176,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "895705f676d447ed",
+  "active": "aa68a275a53cc74f",
   "lastOpenFiles": [
-    "Tutorials/GitHub Desktop.md",
     "Days/Day 1/Esercizi.md",
+    "Days/Day 2/Esercizi.md",
+    "Days/Day 2/Note Scanner.md",
+    "Days/Day 2",
+    "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 2.pdf",
+    "__assets/pdf",
+    "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 1.pdf",
+    "Days/Day 1/Tipi di Dato.md",
+    "Tutorials/GitHub Desktop.md",
+    "JAITA138.md",
     "__assets/images/Pasted image 20241129171552.png",
     "__assets/images/Pasted image 20241129172530.png",
     "__assets/images/Pasted image 20241129172433.png",
@@ -174,7 +196,6 @@
     "__assets/images/Pasted image 20241129172104.png",
     "__assets/images/Pasted image 20241129171940.png",
     "__assets/images/Pasted image 20241129171637.png",
-    "JAITA138.md",
     "__assets/images/Screenshot from 2024-11-29 16-42-55.png",
     "__assets/images/Screenshot from 2024-11-29 16-37-19.png",
     "__assets/images",
@@ -196,11 +217,6 @@
     "Tutorials/Markdown/Attach",
     "Tutorials/Markdown/Markdown + Obsidian.md",
     "Tutorials/Markdown",
-    "Tutorials",
-    "Days/Day 1/Tipi di Dato.md",
-    "Days",
-    "Days/Day 1",
-    "Draw.io/Db Intro.drawio",
     "Prova.md"
   ]
 }
