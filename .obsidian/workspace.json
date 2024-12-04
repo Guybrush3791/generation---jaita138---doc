@@ -11,14 +11,12 @@
             "id": "aa68a275a53cc74f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Days/Day 2/Esercizi.md",
-                "mode": "source",
-                "source": false
+                "file": "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 3.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Esercizi"
+              "icon": "lucide-file-text",
+              "title": "gen-jaita138-tipi-di-dato-1 - es 3"
             }
           },
           {
@@ -176,14 +174,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "aa68a275a53cc74f",
+  "active": "94a314ab9c9734fc",
   "lastOpenFiles": [
     "Days/Day 1/Esercizi.md",
-    "Days/Day 2/Esercizi.md",
-    "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 2.pdf",
-    "Tutorials/GitHub Desktop.md",
     "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 1.pdf",
+    "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 2.pdf",
+    "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 3.pdf",
+    "__assets/pdf/ER-negozio-fiori.pdf",
     "Days/Day 1/Tipi di Dato.md",
+    "Days/Day 2/Esercizi.md",
+    "Tutorials/GitHub Desktop.md",
     "Days/Day 2/Note Scanner.md",
     "Days/Day 2",
     "__assets/pdf",
@@ -214,9 +214,7 @@
     "Tutorials/Markdown/Slides/Slides demo.md",
     "Tutorials/Markdown/Slides",
     "Tutorials/Markdown/Attach/Markdown Linkable Note.md",
-    "Tutorials/Markdown/Attach",
     "Tutorials/Markdown/Markdown + Obsidian.md",
-    "Tutorials/Markdown",
     "Prova.md"
   ]
 }
