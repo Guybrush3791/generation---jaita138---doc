@@ -22,5 +22,4 @@ Definire in file di testo o pdf o excel gli attributi con relativi tipi di dato 
 - Fiori
 - Fornitori
 - Clienti
-
 #### [[gen-jaita138-tipi-di-dato-1 - es 3.pdf|Correzione]]
