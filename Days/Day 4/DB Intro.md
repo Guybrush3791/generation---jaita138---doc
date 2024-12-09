@@ -1,6 +1,5 @@
 # DB Intro
 ## Generare tabella
-
 ```sql
 CREATE TABLE Customer (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -29,8 +28,38 @@ INSERT INTO Customer (first_name, date_of_birth, annual_income, loyalty_points) 
 ## Lettura dei dati
 ### Select
 - selezionare tutti i `Customer` con tutti i suoi attributi
+```sql
+SELECT *
+FROM Customer 
+```
 - selezionare tutti i `nomi` e i `data di nascita` dei `Customer` presenti in tabella
+```sql
+SELECT first_name, date_of_birth 
+FROM Customer
+```
 - selezionare tutti i campi dei `Customer` con un `income annuale` superiore ai 40K
+```sql
+SELECT *
+FROM Customer
+WHERE annual_income > 40000
+```
 - selezionare solo il nome dei `Customer` con un `income annuale` inferiore ai 30K
+```sql
+SELECT *
+FROM Customer
+WHERE annual_income < 30000
+```
 #### Bonus
 - selezionare solo il nome dei `Customer` con un `income annuale` superiore ai 30K e inferiore ai 40K
+```sql
+-- VERSIONE 1
+SELECT *
+FROM Customer
+WHERE annual_income < 40000 
+	AND annual_income > 30000
+
+-- VERSIONE 2
+SELECT *
+FROM Customer
+WHERE annual_income BETWEEN 30000 AND 40000
+```
