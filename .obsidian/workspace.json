@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Days/Day 3/Esercizi.md",
+                "file": "Days/Day 4/DB Intro.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Esercizi"
+              "title": "DB Intro"
             }
           },
           {
@@ -176,10 +176,12 @@
   },
   "active": "aa68a275a53cc74f",
   "lastOpenFiles": [
-    "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 3.pdf",
     "Days/Day 3/Esercizi.md",
-    "Days/Day 1/Tipi di Dato.md",
+    "Days/Day 4/DB Intro.md",
+    "Days/Day 4",
     "Days/Day 1/Esercizi.md",
+    "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 3.pdf",
+    "Days/Day 1/Tipi di Dato.md",
     "Days/Day 2/Esercizi.md",
     "Days/Day 3",
     "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 1.pdf",
@@ -212,7 +214,6 @@
     "Tutorials/Markdown/Mermaid/Flow.md",
     "Tutorials/Markdown/Mermaid/Entity Relationship.md",
     "Tutorials/Markdown/Mermaid/Class diagrams.md",
-    "Tutorials/Markdown/Mermaid",
     "Tutorials/Markdown/Slides/Slides demo.md",
     "Tutorials/Markdown/Attach/Markdown Linkable Note.md",
     "Tutorials/Markdown/Markdown + Obsidian.md",

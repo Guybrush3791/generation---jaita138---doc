@@ -1,0 +1,27 @@
+# DB Intro
+## Generare tabella
+
+```sql
+CREATE TABLE Customer (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    date_of_birth DATE,
+    annual_income INT NOT NULL,
+    loyalty_points INT DEFAULT 0
+);
+```
+
+## Inserimento dati
+```sql
+INSERT INTO Customer (first_name, date_of_birth, annual_income, loyalty_points) VALUES
+('Luca', '1990-05-15', 35000, 120),
+('Maria', '1985-11-20', 45000, 200),
+('Paolo', '1995-07-08', 30000, 80),
+('Giulia', '1988-03-18', 40000, 150),
+('Simone', '1992-09-25', 28000, 90),
+('Elena', '1990-01-12', 38000, 180),
+('Marco', '1982-10-05', 50000, 250),
+('Ilaria', '1993-08-19', 32000, 110),
+('Davide', '1980-12-30', 55000, 300),
+('Chiara', '1996-04-22', 27000, 70);
+```
