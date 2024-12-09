@@ -25,3 +25,12 @@ INSERT INTO Customer (first_name, date_of_birth, annual_income, loyalty_points) 
 ('Davide', '1980-12-30', 55000, 300),
 ('Chiara', '1996-04-22', 27000, 70);
 ```
+
+## Lettura dei dati
+### Select
+- selezionare tutti i `Customer` con tutti i suoi attributi
+- selezionare tutti i `nomi` e i `data di nascita` dei `Customer` presenti in tabella
+- selezionare tutti i campi dei `Customer` con un `income annuale` superiore ai 40K
+- selezionare solo il nome dei `Customer` con un `income annuale` inferiore ai 30K
+#### Bonus
+- selezionare solo il nome dei `Customer` con un `income annuale` superiore ai 30K e inferiore ai 40K
