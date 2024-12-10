@@ -13,24 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Days/Day 4/DB Intro.md",
+                "file": "Days/Day 5/DB - Query - SQL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DB Intro"
-            }
-          },
-          {
-            "id": "31ae209205cfff16",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 3.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "gen-jaita138-tipi-di-dato-1 - es 3"
+              "title": "DB - Query - SQL"
             }
           }
         ]
@@ -176,11 +164,13 @@
   },
   "active": "aa68a275a53cc74f",
   "lastOpenFiles": [
-    "Days/Day 3/Esercizi.md",
     "Days/Day 4/DB Intro.md",
+    "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 3.pdf",
+    "Days/Day 5/DB - Query - SQL.md",
+    "Days/Day 5",
+    "Days/Day 3/Esercizi.md",
     "Days/Day 4",
     "Days/Day 1/Esercizi.md",
-    "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 3.pdf",
     "Days/Day 1/Tipi di Dato.md",
     "Days/Day 2/Esercizi.md",
     "Days/Day 3",
@@ -203,7 +193,6 @@
     "__assets/images/Screenshot from 2024-11-29 16-42-55.png",
     "__assets/images/Screenshot from 2024-11-29 16-37-19.png",
     "__assets/images",
-    "__assets",
     "Tutorials/Markdown/Mermaid/User Journey Diagram.md",
     "Tutorials/Markdown/Mermaid/Timeline.md",
     "Tutorials/Markdown/Mermaid/State diagram.md",
