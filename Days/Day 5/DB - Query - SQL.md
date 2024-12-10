@@ -26,7 +26,49 @@ INSERT INTO Customer (first_name, date_of_birth, annual_income, loyalty_points) 
 ('Chiara', '1996-04-22', 27000, 70);
 ```
 
-# Query
+# Live Query:
+-- trovare per ogni annata quanti Customer sono nati 
+-- in quell'anno
+SELECT YEAR(date_of_birth) AS 'anno di nascita', COUNT(*) 
+FROM Customer 
+GROUP BY YEAR(date_of_birth)
+
+-- trovare l'anno di nascita del Customer piu' giovane
+SELECT MAX(YEAR(date_of_birth)) AS 'anno di nascita'
+FROM Customer
+
+-- trovare l'anno di nascita del Customer piu' vecchio
+SELECT MIN(YEAR(date_of_birth)) AS 'anno di nascita'
+FROM Customer
+
+-- trovare l'anno di nascita medio dei Customer 
+SELECT AVG(YEAR(date_of_birth)) AS 'anno di nascita'
+FROM Customer
+
+-- trovare gli anni in cui e' nato piu' di un Customer
+SELECT YEAR(date_of_birth) AS 'anno di nascita', COUNT(*) 
+FROM Customer
+GROUP BY YEAR(date_of_birth)
+HAVING COUNT(*) > 1
+
+-- ordinare i risultato per annual_income discendente
+SELECT *
+FROM Customer 
+ORDER BY annual_income DESC 
+
+-- selezionare il Customer con reddito piu' alto
+SELECT *
+FROM Customer
+ORDER BY annual_income DESC
+LIMIT 1
+
+-- selezionare i 3 Customer con reddito piu' alto dal
+-- terzo in poi
+SELECT *
+FROM Customer
+ORDER BY annual_income DESC
+LIMIT 3 OFFSET 3;
+# Es: Query
 ## Level 1
 - Seleziona tutti i dettagli dei clienti il cui reddito annuo è superiore a 40.000 euro
 - Recupera i nomi e le date di nascita dei clienti che hanno più di 100 punti fedeltà
