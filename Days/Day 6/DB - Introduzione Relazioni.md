@@ -128,3 +128,19 @@ INSERT INTO EsameStudente (id, votoEsame, esameId, studenteId) VALUES
 (10, 29, 10, 10);
 
 ```
+## Query Interrogative
+### Studente <--> Corso di Studi
+- **tipo relazione**: 1aN
+- per ogni studente esiste un solo corso di studi
+- per ogni corso di studi esistono tanti studenti
+
+#### Domande
+1. Seleziona tutti i nomi degli studenti e i nomi dei corsi di studio a cui sono iscritti.
+
+2. Trova i cognomi degli studenti e i nomi dei corsi che hanno iniziato prima del 2015.
+
+3. Ottieni una lista di studenti nati dopo il 1990 e i rispettivi nomi dei corsi di studio.
+
+4. Elenco di studenti e corsi di studio, ordinati per data di nascita dello studente e data di inizio del corso.
+
+5. Conta quanti studenti sono iscritti a ogni corso di studio.

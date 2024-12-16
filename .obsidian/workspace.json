@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ba5f18da87765ab9",
+        "id": "f8391f1b49548703",
         "type": "tabs",
         "children": [
           {
-            "id": "aa68a275a53cc74f",
+            "id": "62a25310df4af48d",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "__assets/images/Pasted image 20241216154447.png"
+                "file": "Days/Day 6/DB - Introduzione Relazioni.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20241216154447"
+              "icon": "lucide-file",
+              "title": "DB - Introduzione Relazioni"
             }
           }
         ]
@@ -160,10 +162,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "94a314ab9c9734fc",
+  "active": "62a25310df4af48d",
   "lastOpenFiles": [
-    "JAITA138.md",
     "__assets/images/Pasted image 20241216154447.png",
+    "JAITA138.md",
     "Days/Day 6/DB - Introduzione Relazioni.md",
     "Days/Day 5/DB - Query - SQL.md",
     "Days/Day 6",
