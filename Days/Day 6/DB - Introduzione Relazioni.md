@@ -144,3 +144,129 @@ INSERT INTO EsameStudente (id, votoEsame, esameId, studenteId) VALUES
 4. Elenco di studenti e corsi di studio, ordinati per data di nascita dello studente e data di inizio del corso.
 
 5. Conta quanti studenti sono iscritti a ogni corso di studio.
+## Query Recupero
+1. Seleziona tutti i campi dalla tabella Studente.
+
+2. Seleziona solo il nome e il cognome degli studenti dalla tabella Studente.
+
+3. Trova tutti gli studenti che hanno "Mario" come nome.
+
+4. Seleziona gli studenti nati prima del 1992 dalla tabella Studente.
+
+5. Conta il numero totale di studenti presenti nella tabella Studente.
+
+6. Trova gli studenti il cui cognome inizia con la lettera 'B'.
+
+7. Seleziona gli studenti che sono nati dopo il 1993 e ordina i risultati per data di nascita.
+
+8. Ottieni gli studenti che frequentano il corso con ID 2.
+
+9. Seleziona gli studenti il cui nome contiene la parola "Anna".
+
+10. Trova gli studenti il cui cognome finisce con 'i' e mostra solo i loro ID e cognomi.
+### Teoria di Recupero
+## Concetti di Base SQL e Esempi Pratici
+
+### **1. SELECT**
+- Seleziona tutti i campi dalla tabella `Studente`:
+    ```sql
+    SELECT * FROM Studente;
+    ```
+- Seleziona solo il `nome` e il `cognome` degli studenti:
+    ```sql
+    SELECT nome, cognome FROM Studente;
+    ```
+
+---
+
+### **2. FROM**
+- Specifica la tabella `Studente` da cui selezionare i dati:
+    ```sql
+    SELECT nome, dataNascita FROM Studente;
+    ```
+
+---
+
+### **3. WHERE**
+- Seleziona gli studenti il cui nome è esattamente "Mario":
+    ```sql
+    SELECT * FROM Studente WHERE nome = 'Mario';
+    ```
+- Seleziona gli studenti nati prima del 1992:
+    ```sql
+    SELECT * FROM Studente WHERE dataNascita < '1992-01-01';
+    ```
+
+---
+
+### **4. Operatore LIKE**
+- Trova tutti gli studenti il cui cognome inizia con "B":
+    ```sql
+    SELECT * FROM Studente WHERE cognome LIKE 'B%';
+    ```
+- Seleziona gli studenti il cui nome contiene "Ann":
+    ```sql
+    SELECT * FROM Studente WHERE nome LIKE '%Ann%';
+    ```
+
+---
+
+### **5. Operatori di confronto (>, <, >=, <=)**
+- Seleziona gli studenti nati dopo il 1990:
+    ```sql
+    SELECT * FROM Studente WHERE dataNascita > '1990-01-01';
+    ```
+- Seleziona gli studenti nati nel 1990 o successivamente:
+    ```sql
+    SELECT * FROM Studente WHERE dataNascita >= '1990-01-01';
+    ```
+
+---
+
+### **6. COUNT()**
+- Conta il numero totale di studenti:
+    ```sql
+    SELECT COUNT(*) FROM Studente;
+    ```
+- Conta quanti studenti sono nati prima del 1992:
+    ```sql
+    SELECT COUNT(*) FROM Studente WHERE dataNascita < '1992-01-01';
+    ```
+
+---
+
+### **7. ORDER BY**
+- Ordina gli studenti per data di nascita in modo crescente:
+    ```sql
+    SELECT * FROM Studente ORDER BY dataNascita;
+    ```
+- Ordina gli studenti per cognome in modo decrescente:
+    ```sql
+    SELECT * FROM Studente ORDER BY cognome DESC;
+    ```
+
+---
+
+### **8. AND, OR**
+- Trova gli studenti nati dopo il 1990 **e** il cui cognome inizia con "B":
+    ```sql
+    SELECT * FROM Studente WHERE dataNascita > '1990-01-01' AND cognome LIKE 'B%';
+    ```
+- Seleziona gli studenti il cui nome è "Anna" **o** "Mario":
+    ```sql
+    SELECT * FROM Studente WHERE nome = 'Anna' OR nome = 'Mario';
+    ```
+
+---
+
+## **Riassunto dei Concetti**
+1. **SELECT**: Permette di specificare quali colonne visualizzare.
+2. **FROM**: Indica la tabella da cui selezionare i dati.
+3. **WHERE**: Filtra le righe in base a condizioni.
+4. **LIKE**: Cerca modelli nei valori delle colonne.
+5. **Operatori di confronto**: `>`, `<`, `>=`, `<=` per confrontare valori.
+6. **COUNT()**: Conta le righe che soddisfano una condizione.
+7. **ORDER BY**: Ordina i risultati in ordine crescente o decrescente.
+8. **AND/OR**: Combina più condizioni logiche in una query.
+
+Questi concetti sono fondamentali per scrivere query SQL efficaci e risolvere problemi semplici legati alla manipolazione dei dati.
