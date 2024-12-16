@@ -136,15 +136,35 @@ INSERT INTO EsameStudente (id, votoEsame, esameId, studenteId) VALUES
 
 #### Domande
 1. Seleziona tutti i nomi degli studenti e i nomi dei corsi di studio a cui sono iscritti.
-
+```sql
+SELECT s.nome, cs.nome AS 'corso di studi'
+FROM Studente s 
+	JOIN CorsoStudi cs 
+		ON s.corsoStudiId = cs.id;
+```
 2. Trova i cognomi degli studenti e i nomi dei corsi che hanno iniziato prima del 2015.
-
+```sql
+SELECT *
+FROM Studente s 
+	JOIN CorsoStudi cs 
+		ON s.corsoStudiId = cs.id
+-- WHERE YEAR(cs.dataInizio) < 2015;
+WHERE cs.dataInizio < '2015-01-01';
+```
 3. Ottieni una lista di studenti nati dopo il 1990 e i rispettivi nomi dei corsi di studio.
-
+```sql
+SELECT s.nome, cs.nome AS 'corso di studi'
+FROM Studente s 
+	JOIN CorsoStudi cs 
+		ON s.corsoStudiId = cs.id
+-- WHERE YEAR(s.dataNascita) > 1990
+WHERE s.dataNascita >= '1991-01-01';
+```
 4. Elenco di studenti e corsi di studio, ordinati per data di nascita dello studente e data di inizio del corso.
 
 5. Conta quanti studenti sono iscritti a ogni corso di studio.
-## Query Recupero
+## Recupero
+### Query
 1. Seleziona tutti i campi dalla tabella Studente.
 
 2. Seleziona solo il nome e il cognome degli studenti dalla tabella Studente.
@@ -165,7 +185,7 @@ INSERT INTO EsameStudente (id, votoEsame, esameId, studenteId) VALUES
 
 10. Trova gli studenti il cui cognome finisce con 'i' e mostra solo i loro ID e cognomi.
 ### Teoria di Recupero
-## Concetti di Base SQL e Esempi Pratici
+#### Concetti di Base SQL e Esempi Pratici
 
 ### **1. SELECT**
 - Seleziona tutti i campi dalla tabella `Studente`:
@@ -259,7 +279,7 @@ INSERT INTO EsameStudente (id, votoEsame, esameId, studenteId) VALUES
 
 ---
 
-## **Riassunto dei Concetti**
+#### **Riassunto dei Concetti**
 1. **SELECT**: Permette di specificare quali colonne visualizzare.
 2. **FROM**: Indica la tabella da cui selezionare i dati.
 3. **WHERE**: Filtra le righe in base a condizioni.
