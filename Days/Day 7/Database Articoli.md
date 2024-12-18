@@ -263,3 +263,20 @@ INSERT INTO Articoli_Categorie (id_articolo, id_categoria) VALUES
 8. Trova l'utente che ha la data di iscrizione più antica.
 9. Recupera le categorie e il numero di articoli associati a ciascuna, ordinati dal più al meno.
 10. Calcola il numero totale di articoli pubblicati da utenti iscritti nel 2024.
+
+## Livello 3: Bonus
+
+1. Recupera gli utenti che non hanno scritto nessun articolo.
+> [!note] Eseguire la seguente query per creare un utente senza articoli pubblicati
+> ```sql
+> INSERT INTO Utenti (nome, cognome, email, data_iscrizione)
+> VALUES ("Gigi", "Bianchi", "gigi@gmail.com", '2020-01-01');
+> ```
+2. Trova le categorie che non hanno alcun articolo associato.
+> [!note] Eseguire la seguente query per creare una categoria senza articoli associati
+> ```sql
+> INSERT INTO Categorie (nome_categoria, descrizione)
+> VALUES ("my cat", "empty desc")
+> ```
+3. Trova le categorie che contengono articoli scritti da utenti iscritti prima del 2024.
+4. Recupera le categorie che sono associate ad almeno 5 articoli pubblicati nel 2024.
