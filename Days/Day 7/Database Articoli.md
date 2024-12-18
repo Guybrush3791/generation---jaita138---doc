@@ -250,3 +250,16 @@ INSERT INTO Articoli_Categorie (id_articolo, id_categoria) VALUES
 8. Recupera tutti gli articoli pubblicati tra il 1° giugno 2024 e il 31 agosto 2024.
 9. Recupera i dettagli delle categorie associate all'articolo con `id_articolo` = 10.
 10. Recupera i nomi degli utenti ordinati per data di iscrizione più recente.
+
+## Livello 2: Interrogazioni Intermedie
+
+1. Conta il numero di articoli scritti da ogni utente.
+2. Trova la categoria con il maggior numero di articoli associati.
+3. Recupera gli utenti che hanno scritto più di 2 articoli.
+4. Calcola la data di pubblicazione più recente per ogni categoria.
+5. Trova il numero medio di articoli per utente.
+6. Recupera le categorie che hanno almeno 3 articoli associati.
+7. Calcola il totale degli articoli pubblicati per ogni mese del 2024.
+8. Trova l'utente che ha la data di iscrizione più antica.
+9. Recupera le categorie e il numero di articoli associati a ciascuna, ordinati dal più al meno.
+10. Calcola il numero totale di articoli pubblicati da utenti iscritti nel 2024.
