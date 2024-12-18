@@ -279,4 +279,4 @@ INSERT INTO Articoli_Categorie (id_articolo, id_categoria) VALUES
 > VALUES ("my cat", "empty desc")
 > ```
 3. Trova le categorie che contengono articoli scritti da utenti iscritti prima del 2024.
-4. Recupera le categorie che sono associate ad almeno 5 articoli pubblicati nel 2024.
+4. Recupera le categorie che sono associate ad almeno 3 articoli pubblicati nel 2024.
