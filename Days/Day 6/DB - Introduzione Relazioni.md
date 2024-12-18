@@ -129,12 +129,8 @@ INSERT INTO EsameStudente (id, votoEsame, esameId, studenteId) VALUES
 
 ```
 ## Query Interrogative
-### Studente <--> Corso di Studi
-- **tipo relazione**: 1aN
-- per ogni studente esiste un solo corso di studi
-- per ogni corso di studi esistono tanti studenti
 
-#### Domande
+#### Domande Relazione 1aN
 1. Seleziona tutti i nomi degli studenti e i nomi dei corsi di studio a cui sono iscritti.
 ```sql
 SELECT s.nome, cs.nome AS 'corso di studi'
@@ -161,8 +157,30 @@ FROM Studente s
 WHERE s.dataNascita >= '1991-01-01';
 ```
 4. Elenco di studenti e corsi di studio, ordinati per data di nascita dello studente e data di inizio del corso.
+```sql
+SELECT s.nome, cs.nome AS 'corso di studi'
+FROM Studente s
+	JOIN CorsoStudi cs 
+		ON s.corsoStudiId = cs.id
+ORDER BY s.dataNascita, cs.dataInizio 
+```
 
-5. Conta quanti studenti sono iscritti a ogni corso di studio.
+6. Conta quanti studenti sono iscritti a ogni corso di studio.
+```sql
+SELECT cs.id, cs.nome, COUNT(*) AS '#studenti'
+FROM Studente s
+	JOIN CorsoStudi cs 
+		ON s.corsoStudiId = cs.id
+GROUP BY cs.id
+```
+
+#### Domande Relazione NaM
+1. **Quali esami ha sostenuto lo studente con `id 3`?**
+2. **Quali studenti sono iscritti al corso con `id 1`?**
+3. **Qual è il voto medio ottenuto in ciascun esame?**
+4. **Quanti esami ha sostenuto ogni studente?**
+5. **Quali esami non sono stati ancora sostenuti da nessuno studente?**
+
 ## Recupero
 ### Query
 1. Seleziona tutti i campi dalla tabella Studente.

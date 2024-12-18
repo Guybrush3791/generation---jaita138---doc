@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Days/Day 6/DB - Introduzione Relazioni.md",
+                "file": "Days/Day 7/Database Articoli.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DB - Introduzione Relazioni"
+              "title": "Database Articoli"
             }
           }
         ]
@@ -162,10 +162,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "94a314ab9c9734fc",
+  "active": "62a25310df4af48d",
   "lastOpenFiles": [
-    "Days/Day 5/DB - Query - SQL.md",
     "Days/Day 6/DB - Introduzione Relazioni.md",
+    "Days/Day 7/Database Articoli.md",
+    "Days/Day 7",
+    "Days/Day 5/DB - Query - SQL.md",
     "__assets/images/Pasted image 20241216154447.png",
     "JAITA138.md",
     "Days/Day 6",
@@ -185,7 +187,6 @@
     "__assets/pdf/ER-negozio-fiori.pdf",
     "Tutorials/GitHub Desktop.md",
     "Days/Day 2/Note Scanner.md",
-    "Days/Day 2",
     "__assets/images/Pasted image 20241129171552.png",
     "__assets/images/Pasted image 20241129172530.png",
     "__assets/images/Pasted image 20241129172433.png",
