@@ -257,12 +257,24 @@ INSERT INTO Articoli_Categorie (id_articolo, id_categoria) VALUES
 2. Trova la categoria con il maggior numero di articoli associati.
 3. Recupera gli utenti che hanno scritto più di 2 articoli.
 4. Calcola la data di pubblicazione più recente per ogni categoria.
-5. Trova il numero medio di articoli per utente.
-6. Recupera le categorie che hanno almeno 3 articoli associati.
-7. Calcola il totale degli articoli pubblicati per ogni mese del 2024.
-8. Trova l'utente che ha la data di iscrizione più antica.
-9. Recupera le categorie e il numero di articoli associati a ciascuna, ordinati dal più al meno.
-10. Calcola il numero totale di articoli pubblicati da utenti iscritti nel 2024.
+5. ~~Trova il numero medio di articoli per utente.~~
+> [!attention]- DA NON FARE
+> Sottoquery richiesta
+> ```sql
+> SELECT avg(subQ.n_articoli) media_articoli
+>	FROM (
+>		SELECT u.id_utente, COUNT(*) n_articoli 
+>		FROM Utenti u 
+>			JOIN Articoli a 
+>				ON	u.id_utente = a.id_utente 
+>		GROUP BY u.id_utente
+>	) subQ
+>```
+1. Recupera le categorie che hanno almeno 3 articoli associati.
+2. Calcola il totale degli articoli pubblicati per ogni mese del 2024.
+3. Trova l'utente che ha la data di iscrizione più antica.
+4. Recupera le categorie e il numero di articoli associati a ciascuna, ordinati dal più al meno.
+5. Calcola il numero totale di articoli pubblicati da utenti iscritti nel 2024.
 
 ## Livello 3: Bonus
 

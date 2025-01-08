@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Days/Day 7/Database Articoli.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -162,7 +162,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "94a314ab9c9734fc",
+  "active": "62a25310df4af48d",
   "lastOpenFiles": [
     "Days/Day 6/DB - Introduzione Relazioni.md",
     "Days/Day 7/Database Articoli.md",
