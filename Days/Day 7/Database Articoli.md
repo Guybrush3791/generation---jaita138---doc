@@ -1,38 +1,47 @@
 # Repo
+
 `gen-jaita138-db-query-1`
+
 # Modalita' di Consegna
+
 Foglio di testo riportante accoppiata domanda-query
 
 # Database
-## Descrizione 
+
+## Descrizione
+
 Certamente! Ecco una proposta per il tuo database con una tabella centrale, una relazione 1 a N e una relazione M a N:
+
 ### **Struttura delle Tabelle**
 
 1. **Utenti**
-    
-    - `id_utente` (INT, PRIMARY KEY, AUTO_INCREMENT)
-    - `nome` (VARCHAR(50))
-    - `cognome` (VARCHAR(50))
-    - `email` (VARCHAR(100))
-    - `data_iscrizione` (DATE)
+
+   - `id_utente` (INT, PRIMARY KEY, AUTO_INCREMENT)
+   - `nome` (VARCHAR(50))
+   - `cognome` (VARCHAR(50))
+   - `email` (VARCHAR(100))
+   - `data_iscrizione` (DATE)
+
 2. **Articoli**
-    
-    - `id_articolo` (INT, PRIMARY KEY, AUTO_INCREMENT)
-    - `id_utente` (INT, FOREIGN KEY REFERENCES `Utenti`(`id_utente`))
-    - `titolo` (VARCHAR(150))
-    - `contenuto` (TEXT)
-    - `data_pubblicazione` (DATETIME)
-    - `prezzo` (DECIMAL)
-1. **Categorie**
-    
-    - `id_categoria` (INT, PRIMARY KEY, AUTO_INCREMENT)
-    - `nome_categoria` (VARCHAR(100))
-    - `descrizione` (TEXT)
+
+   - `id_articolo` (INT, PRIMARY KEY, AUTO_INCREMENT)
+   - `id_utente` (INT, FOREIGN KEY REFERENCES `Utenti`(`id_utente`))
+   - `titolo` (VARCHAR(150))
+   - `contenuto` (TEXT)
+   - `data_pubblicazione` (DATETIME)
+   - `prezzo` (DECIMAL)
+
+3. **Categorie**
+
+   - `id_categoria` (INT, PRIMARY KEY, AUTO_INCREMENT)
+   - `nome_categoria` (VARCHAR(100))
+   - `descrizione` (TEXT)
+
 4. **Articoli_Categorie**
-    
-    - `id_articolo` (INT, FOREIGN KEY REFERENCES `Articoli`(`id_articolo`))
-    - `id_categoria` (INT, FOREIGN KEY REFERENCES `Categorie`(`id_categoria`))
-    - **PRIMARY KEY:** (`id_articolo`, `id_categoria`)
+
+   - `id_articolo` (INT, FOREIGN KEY REFERENCES `Articoli`(`id_articolo`))
+   - `id_categoria` (INT, FOREIGN KEY REFERENCES `Categorie`(`id_categoria`))
+   - **PRIMARY KEY:** (`id_articolo`, `id_categoria`)
 
 ### **Schema delle Relazioni**
 
@@ -40,7 +49,9 @@ Certamente! Ecco una proposta per il tuo database con una tabella centrale, una 
 - **Articoli** (M) ↔ (M) **Categorie** tramite **Articoli_Categorie**
 
 ## Dump SQL
+
 Script di creazione e inserimento dati
+
 ```sql
 -- Creazione delle tabelle
 
@@ -238,57 +249,296 @@ INSERT INTO Articoli_Categorie (id_articolo, id_categoria) VALUES
 
 # Query
 
-
 ### Livello 1: Interrogazioni di Base
+
 1. Recupera tutti gli utenti registrati nel sistema.
+
+```sql
+SELECT *
+FROM Utenti
+```
+
 2. Recupera il nome, cognome e email di tutti gli utenti iscritti dopo il 1° marzo 2024.
+
+```sql
+SELECT nome, cognome, email
+FROM Utenti
+WHERE data_iscrizione >= '2024-03-01'
+```
+
 3. Recupera tutti gli articoli insieme al nome e cognome dell'autore.
+
+```sql
+SELECT a.*, u.nome, u.cognome 
+FROM Articoli a 
+	JOIN Utenti u 
+		ON a.id_utente = u.id_utente 
+```
+
 4. Recupera i titoli degli articoli pubblicati nel mese di maggio 2024.
+
+```sql
+-- VERSIONE 1
+SELECT *
+FROM Articoli a 
+WHERE data_pubblicazione BETWEEN '2024-05-01' AND '2024-05-31'
+
+-- VERSIONE 2
+SELECT *
+FROM Articoli a 
+WHERE MONTH(data_pubblicazione) = 5 
+	AND YEAR(data_pubblicazione) = 2024
+
+-- VERSIONE 3
+SELECT *
+FROM Articoli a 
+WHERE data_pubblicazione >= '2024-05-01' 
+	AND data_pubblicazione < '2024-06-01'
+```
+
 5. Recupera le prime 5 categorie ordinate alfabeticamente per nome.
+
+```sql
+SELECT *
+FROM Categorie c 
+ORDER BY nome_categoria
+LIMIT 5
+```
+
 6. Recupera gli articoli che appartengono alla categoria 'Tecnologia'.
+
+```sql
+SELECT a.*
+FROM Categorie c 
+	JOIN Articoli_Categorie ac 
+		ON c.id_categoria = ac.id_categoria 
+	JOIN Articoli a 
+		ON ac.id_articolo = a.id_articolo 
+WHERE nome_categoria LIKE 'Tecnologia'
+```
+
 7. Recupera le email degli utenti che hanno scritto almeno un articolo.
+
+```sql
+-- VERSIONE 1
+SELECT u.email
+FROM Utenti u 
+	JOIN Articoli a 
+		ON u.id_utente = a.id_utente 
+GROUP BY u.email 
+
+-- VERSIONE 2
+SELECT DISTINCT u.email
+FROM Utenti u 
+	JOIN Articoli a 
+		ON u.id_utente = a.id_utente 
+```
+
 8. Recupera tutti gli articoli pubblicati tra il 1° giugno 2024 e il 31 agosto 2024.
+
+```sql
+-- VERSIONE 1
+SELECT *
+FROM Articoli a 
+WHERE data_pubblicazione BETWEEN '2024-06-01' AND '2024-08-31'
+
+-- VERSIONE 2
+SELECT *
+FROM Articoli a 
+WHERE data_pubblicazione >= '2024-06-01' 
+	AND data_pubblicazione < '2024-08-31'
+```
+
 9. Recupera i dettagli delle categorie associate all'articolo con `id_articolo` = 10.
+
+```sql
+SELECT c.*
+FROM Articoli_Categorie ac 
+	JOIN Categorie c 
+		ON ac.id_categoria = c.id_categoria 
+WHERE ac.id_articolo = 10
+```
+
 10. Recupera i nomi degli utenti ordinati per data di iscrizione più recente.
+
+```sql
+SELECT *
+FROM Utenti u 
+ORDER BY data_iscrizione DESC
+```
 
 ## Livello 2: Interrogazioni Intermedie
 
 1. Conta il numero di articoli scritti da ogni utente.
+
+```sql
+SELECT u.id_utente, u.nome, u.cognome, u.email, COUNT(*) AS n_articoli
+FROM Utenti u 
+	JOIN Articoli a 
+		ON u.id_utente = a.id_utente 
+GROUP BY u.id_utente 
+```
+
 2. Trova la categoria con il maggior numero di articoli associati.
+
+```sql
+SELECT c.id_categoria, c.nome_categoria, COUNT(*) AS n_articoli
+FROM Categorie c 
+	JOIN Articoli_Categorie ac 
+		ON c.id_categoria = ac.id_categoria 
+GROUP BY c.id_categoria  
+ORDER BY n_articoli DESC
+LIMIT 1
+```
+
 3. Recupera gli utenti che hanno scritto più di 2 articoli.
+
+```sql
+SELECT c.id_categoria, c.nome_categoria, COUNT(*) AS n_articoli
+FROM Categorie c 
+	JOIN Articoli_Categorie ac 
+		ON c.id_categoria = ac.id_categoria 
+GROUP BY c.id_categoria  
+HAVING n_articoli > 2
+```
+
 4. Calcola la data di pubblicazione più recente per ogni categoria.
+
+```sql
+SELECT c.id_categoria, c.nome_categoria, MAX(a.data_pubblicazione) AS ultima_pub
+FROM Categorie c 
+	JOIN Articoli_Categorie ac 
+		ON c.id_categoria = ac.id_categoria 
+	JOIN Articoli a 
+		ON ac.id_articolo = a.id_articolo
+GROUP BY c.id_categoria 
+```
+
 5. ~~Trova il numero medio di articoli per utente.~~
-> [!attention]- DA NON FARE
-> Sottoquery richiesta
-> ```sql
-> SELECT avg(subQ.n_articoli) media_articoli
->	FROM (
->		SELECT u.id_utente, COUNT(*) n_articoli 
->		FROM Utenti u 
->			JOIN Articoli a 
->				ON	u.id_utente = a.id_utente 
->		GROUP BY u.id_utente
->	) subQ
->```
-1. Recupera le categorie che hanno almeno 3 articoli associati.
-2. Calcola il totale degli articoli pubblicati per ogni mese del 2024.
-3. Trova l'utente che ha la data di iscrizione più antica.
-4. Recupera le categorie e il numero di articoli associati a ciascuna, ordinati dal più al meno.
-5. Calcola il numero totale di articoli pubblicati da utenti iscritti nel 2024.
+   > [!attention]- DA NON FARE
+   > Sottoquery richiesta
+   >
+   > ```sql
+   > SELECT avg(subQ.n_articoli) media_articoli
+   > 	FROM (
+   > 		SELECT u.id_utente, COUNT(*) n_articoli
+   > 		FROM Utenti u
+   > 			JOIN Articoli a
+   > 				ON	u.id_utente = a.id_utente
+   > 		GROUP BY u.id_utente
+   > 	) subQ
+   > ```
+6. Recupera le categorie che hanno almeno 3 articoli associati.
+
+```sql
+SELECT c.id_categoria, c.nome_categoria, COUNT(*) AS n_articoli
+FROM Categorie c 
+	JOIN Articoli_Categorie ac 
+		ON c.id_categoria = ac.id_categoria 
+GROUP BY c.id_categoria 
+HAVING n_articoli >= 3
+```
+
+7. Calcola il totale degli articoli pubblicati per ogni mese del 2024.
+
+```sql
+SELECT MONTH(data_pubblicazione), COUNT(*) n_articoli
+FROM Articoli a 
+WHERE YEAR(data_pubblicazione) = 2024
+GROUP BY MONTH(data_pubblicazione)
+```
+
+8. Trova l'utente che ha la data di iscrizione più antica.
+
+```sql
+-- VERSIONE 1
+SELECT *
+FROM Utenti u 
+ORDER BY data_iscrizione 
+LIMIT 1
+
+-- VERSIONE 2
+SELECT nome, data_iscrizione 
+FROM Utenti u 
+WHERE data_iscrizione = (
+	SELECT MIN(u2.data_iscrizione)
+	FROM Utenti u2 
+)
+```
+
+9. Recupera le categorie ordinate per numero articoli in maniera decrescente
+
+```sql
+SELECT c.id_categoria, c.nome_categoria, COUNT(*) AS n_articoli 
+FROM Categorie c 
+	JOIN Articoli_Categorie ac 
+		ON c.id_categoria  = ac.id_categoria 
+GROUP BY c.id_categoria 
+ORDER BY n_articoli DESC
+```
+
+10. Calcola il numero totale di articoli pubblicati da utenti iscritti nel 2024.
+
+```sql
+SELECT count(*)
+FROM Utenti u 
+	JOIN Articoli a 
+		ON u.id_utente = a.id_utente 
+WHERE YEAR(data_iscrizione) = 2024
+```
 
 ## Livello 3: Bonus
 
 1. Recupera gli utenti che non hanno scritto nessun articolo.
-> [!note] Eseguire la seguente query per creare un utente senza articoli pubblicati
-> ```sql
-> INSERT INTO Utenti (nome, cognome, email, data_iscrizione)
-> VALUES ("Gigi", "Bianchi", "gigi@gmail.com", '2020-01-01');
-> ```
+   > [!note] Eseguire la seguente query per creare un utente senza articoli pubblicati
+   >
+   > ```sql
+   > INSERT INTO Utenti (nome, cognome, email, data_iscrizione)
+   > VALUES ("Gigi", "Bianchi", "gigi@gmail.com", '2020-01-01');
+   > ```
+```sql
+SELECT u.*
+FROM Utenti u 
+	LEFT JOIN Articoli a 
+		ON u.id_utente = a.id_utente 
+WHERE a.id_articolo IS NULL
+```
 2. Trova le categorie che non hanno alcun articolo associato.
-> [!note] Eseguire la seguente query per creare una categoria senza articoli associati
-> ```sql
-> INSERT INTO Categorie (nome_categoria, descrizione)
-> VALUES ("my cat", "empty desc")
-> ```
+   > [!note] Eseguire la seguente query per creare una categoria senza articoli associati
+   >
+   > ```sql
+   > INSERT INTO Categorie (nome_categoria, descrizione)
+   > VALUES ("my cat", "empty desc")
+   > ```
+
+```sql
+SELECT c.*
+FROM Categorie c 
+	LEFT JOIN Articoli_Categorie ac 
+		ON c.id_categoria = ac.id_categoria 
+WHERE ac.id_articolo IS NULL 
+```
 3. Trova le categorie che contengono articoli scritti da utenti iscritti prima del 2024.
-4. Recupera le categorie che sono associate ad almeno 3 articoli pubblicati nel 2024.
+```sql
+SELECT DISTINCT c.*
+FROM Utenti u
+	JOIN Articoli a 
+		ON u.id_utente = a.id_utente 
+	JOIN Articoli_Categorie ac 
+		ON a.id_articolo = ac.id_articolo 
+	JOIN Categorie c 
+		ON ac.id_categoria = c.id_categoria 
+WHERE u.data_iscrizione < '2024-01-01'
+```
+5. Recupera le categorie che sono associate ad almeno 3 articoli pubblicati nel 2024.
+```sql
+SELECT c.id_categoria, c.nome_categoria, COUNT(*) n_articoli
+FROM Categorie c 
+	JOIN Articoli_Categorie ac 
+		ON c.id_categoria = ac.id_categoria
+	JOIN Articoli a 
+		ON ac.id_articolo = a.id_articolo 
+WHERE YEAR(a.data_pubblicazione) = 2024
+GROUP BY c.id_categoria 
+HAVING n_articoli >= 3
+```
