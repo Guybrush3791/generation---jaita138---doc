@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "96bf2182a5beda72",
@@ -162,7 +162,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "94a314ab9c9734fc",
+  "active": "bbed4bfddba8cfa8",
   "lastOpenFiles": [
     "__assets/images/Pasted image 20250114170911.png",
     "Days/Day 8/Init SpringBoot Project.md",

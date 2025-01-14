@@ -25,3 +25,13 @@
 
 ### Example
 ![[Pasted image 20250114170911.png]]
+
+## Database Connection
+`src/main/resources/application.properties`
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/jaita138-db-spring-1
+spring.datasource.username=root
+spring.datasource.password=code
+
+spring.jpa.hibernate.ddl-auto=update
+```
