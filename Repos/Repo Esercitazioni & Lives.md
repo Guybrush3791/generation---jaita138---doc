@@ -9,4 +9,5 @@
 
 ### SpringBoot
 - [intro **SpringBoot** + **Hibernate**](https://github.com/Guybrush3791/gen-jaita138-springboot-1)
-- [SpringBoot + Hibernate 2](https://github.com/Guybrush3791/gen-jaita138-springboot-2
+- [SpringBoot + Hibernate 2](https://github.com/Guybrush3791/gen-jaita138-springboot-2)
+- [SpringBoot + Hibernate 3](https://github.com/Guybrush3791/gen-jaita138-springboot-3)
