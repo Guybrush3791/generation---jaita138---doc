@@ -12,3 +12,5 @@
 - [SpringBoot + Hibernate 2](https://github.com/Guybrush3791/gen-jaita138-springboot-2)
 - [SpringBoot + Hibernate 3](https://github.com/Guybrush3791/gen-jaita138-springboot-3)
 - [SpringBoot + Hibernate 4](https://github.com/Guybrush3791/gen-jaita138-springboot-4)
+- [SpringBoot + Hibernate 5](https://github.com/Guybrush3791/gen-jaita138-springboot-5)
+
