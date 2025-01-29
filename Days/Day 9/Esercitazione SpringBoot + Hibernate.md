@@ -180,7 +180,24 @@ Aggiungere relazione all'interno delle entità (`@OneToMany` e `@ManyToOne`) con
 
 Inserire dati nella nuova tabella
 ```sql
--- TODO!
+-- ROLE
+INSERT INTO `Role` (`nome`, `descrizione`) VALUES
+('Admin', 'Amministratore del sistema con accesso completo.'),
+('Editor', 'Utente con permessi di modifica dei contenuti.'),
+('Viewer', 'Utente con permessi di sola lettura.');
+
+-- USER (w/ role_id)
+INSERT INTO `Utente` (`nome`, `cognome`, `username`, `password`, `credito`, `role_id`) VALUES
+('Mario', 'Rossi', 'mario.rossi', 'password123', 10000, 1), -- Admin
+('Luigi', 'Verdi', 'luigi.verdi', 'password123', 5000, 2),  -- Editor
+('Anna', 'Bianchi', 'anna.bianchi', 'password123', 2000, 3), -- Viewer
+('Giovanni', 'Neri', 'giovanni.neri', 'password123', 7500, 2), -- Editor
+('Laura', 'Gialli', 'laura.gialli', 'password123', 3000, 3), -- Viewer
+('Paolo', 'Blu', 'paolo.blu', 'password123', 1000, 3), -- Viewer
+('Sara', 'Viola', 'sara.viola', 'password123', 6000, 2), -- Editor
+('Marco', 'Arancione', 'marco.arancione', 'password123', 4000, 3), -- Viewer
+('Elena', 'Rosa', 'elena.rosa', 'password123', 8000, 1), -- Admin
+('Francesca', 'Marrone', 'francesca.marrone', 'password123', 1500, 3); -- 
 ```
 
 Aggiungere la stampa del ruolo all'interno del `toString` dello `User` e permettere di scegliere il ruolo in fase di creazione di un nuovo utente.
