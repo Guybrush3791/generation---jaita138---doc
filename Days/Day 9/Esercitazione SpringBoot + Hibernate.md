@@ -2,29 +2,30 @@
 `gen-jaita138-springboot-hibernate-1`
 
 # Todo
-## Fase 1
+## Day 1
+### Fase 1
 Sulla falsa riga dell'[ultimo esercizio visto a lezione](https://github.com/Guybrush3791/gen-jaita138-springboot-5) generare la tripletta `Entity`, `Repo` e `Service` per la seguente entità:
-### Utente
+#### Utente
 - nome : String : VARCHAR(64)
 - cognome : String : VARCHAR(64)
 - username : String : VARCHAR(128)
 - password : String : VARCHAR(64)
 - credito : Int : Int (il valore deve essere espresso in centesimi di euro)
 
-#### Entità
+##### Entità
 L'entità dovra' fornite tutti i campi privati, proprietà `getter`/`setter` e implementazione sensata del metodo `toString`
 
-#### Repo
+##### Repo
 Definire `query` custom **solo se necessario**
 
-#### Service
+##### Service
 Definire almeno i 4 metodi principali:
 - `findAll`: trova tutti gli utenti presenti in tabella
 - `save`: crea/aggiorna utenti
 - `delete`: elimina utenti
 - `findById`: recupera utente a partire dall'`id`
 
-## Fase 2
+### Fase 2
 Dopo aver creato e verificato la presenza di dati in tabella eseguire i seguenti inserimenti attraverso `DBEaver`:
 ```sql
 INSERT INTO Utente (nome, cognome, username, password, credito) VALUES
@@ -131,22 +132,57 @@ INSERT INTO Utente (nome, cognome, username, password, credito) VALUES
 ```
 
 Definire poi la classe `CliManager` con le seguenti caratteristiche
-### CliManager
-#### Costruttore
+#### CliManager
+##### Costruttore
 Costruttore che acquisisce tutti i `service` necessari al suo funzionamento e che lancia il menu a terminale
-#### Metodo: `printOptions`
+##### Metodo: `printOptions`
 Metodo che presenta le possibili scelte all'utente, e le esegue quando richieste. Questo metodo termina la sua esecuzione solo a richiesta esplicita dell'utente (*loop infinito*).
 
-##### Opzioni disponibili nel menu
+###### Opzioni disponibili nel menu
 - stampa tutti gli utenti presenti in tabella
 - inserisci un nuovo utente (richiedento tutti i dati necessari)
 - modificare i dettagli di un utente
 - eliminare un utente a partire dall'`id`
 
-## [BONUS] Fase 3
+### [BONUS] Fase 3
 Aggiungere al menu le seguenti funzioni:
 - trovare tutti gli utenti con nome che inizia per `a`
 - trovare tutti gli utenti con credito superiore ai 10 euro *(attenzione alle conversioni)*
 - trovare tutti gli utenti con nome `NULL` o cognome `NULL`
 - trovare tutti gli utenti con credito positivo ma inferiore ai 10 euro *(attenzione alle conversioni)*
+## Day 2
+### Fase 1
+Introdurre la seguente entità all'interno dello stesso progetto l'entita' **Role** che descrive il ruolo dell'utente all'interno del sw (es: utente normale, amministratore, god, ecc)
 
+#### Role
+- nome : String : VARCHAR
+- descrizione : String : VARCHAR
+
+##### Entità
+L'entità dovra' fornite tutti i campi privati, proprietà `getter`/`setter` e implementazione sensata del metodo `toString`
+
+##### Repo
+Definire `query` custom **solo se necessario**
+
+##### Service
+Definire almeno i 4 metodi principali:
+- `findAll`: trova tutti gli utenti presenti in tabella
+- `save`: crea/aggiorna utenti
+- `findById`: recupera utente a partire dall'`id`
+
+### Fase 2
+Aggiungere relazione all'interno delle entità (`@OneToMany` e `@ManyToOne`) con tipi di dato coerenti alla direzione della relazione
+
+> [!note] per ogni utente c'e' un solo ruolo ; per ogni ruolo ci sono tanti utenti
+
+> [!attention] RIGENERARE IL DB SE LA RELAZIONE NON VIENE CREATA AUTOMATICAMENTE
+
+Inserire dati nella nuova tabella
+```sql
+-- TODO!
+```
+
+Aggiungere la stampa del ruolo all'interno del `toString` dello `User` e permettere di scegliere il ruolo in fase di creazione di un nuovo utente.
+
+### [BONUS] Fase 3
+Dare la possibilità di modificare il ruolo di un utente
