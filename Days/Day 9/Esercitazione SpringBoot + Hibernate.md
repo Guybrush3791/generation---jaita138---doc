@@ -151,6 +151,7 @@ Aggiungere al menu le seguenti funzioni:
 - trovare tutti gli utenti con nome `NULL` o cognome `NULL`
 - trovare tutti gli utenti con credito positivo ma inferiore ai 10 euro *(attenzione alle conversioni)*
 ## Day 2
+[Esercizio di controllo](https://github.com/Guybrush3791/gen-jaita138-springboot-6)
 ### Fase 1
 Introdurre la seguente entità all'interno dello stesso progetto l'entita' **Role** che descrive il ruolo dell'utente all'interno del sw (es: utente normale, amministratore, god, ecc)
 
