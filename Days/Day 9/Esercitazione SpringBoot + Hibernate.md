@@ -204,3 +204,7 @@ Aggiungere la stampa del ruolo all'interno del `toString` dello `User` e permett
 
 ### [BONUS] Fase 3
 Dare la possibilità di modificare il ruolo di un utente
+
+## Day 3
+### Fase 1
+Con particolare attenzione all'esercizio svolto in live, procedere al `refactoring` dei metodi `insert` e `update` dello `user`, facendo in modo che contengano il codice dedicato, mentre condividano in un unico metodo il codice condiviso.
