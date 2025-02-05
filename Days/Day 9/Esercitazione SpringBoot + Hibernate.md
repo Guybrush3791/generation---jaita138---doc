@@ -208,3 +208,44 @@ Dare la possibilità di modificare il ruolo di un utente
 ## Day 3
 ### Fase 1
 Con particolare attenzione all'esercizio svolto in live, procedere al `refactoring` dei metodi `insert` e `update` dello `user`, facendo in modo che contengano il codice dedicato, mentre condividano in un unico metodo il codice condiviso.
+## Day 4
+### Fase 1
+Introdurre all'interno dello stesso progetto l'entita' **SubReddit** che descrive le caratteristiche un sotto-forum della piattaforma principale.
+#### SubReddit
+- name : String : VARCHAR(64)
+- description : String : TEXT
+##### Entità
+L'entità dovra' fornite tutti i campi privati, proprietà `getter`/`setter` e implementazione sensata del metodo `toString`
+##### Repo
+Definire `query` custom **solo se necessario**
+##### Service
+Definire almeno i 4 metodi principali:
+- `findAll`: trova tutti gli utenti presenti in tabella
+- `save`: crea/aggiorna utenti
+- `findById`: recupera utente a partire dall'`id`
+### Fase 2
+Dopo aver definito l'entità aggiungere i campi che descrivono la relazione all'interno delle classi relative, e verificare tramite **DbEaver** che la tabella ponte sia stata creata correttamente.
+Modificare poi i metodi per `inserimento` e `modifica` dell'entità **Utente**, facendo in modo che sia permesso all'utente di definire tutti i **SubReddit** a lui connessi.
+
+### [BONUS] Fase 3
+Ad ogni iterazione in cui si chiede di associare un altro **SubReddit** all'utente che si sta `inserendo`/`modificando`, suggerire solo i **SubReddit** che non sono ancora stati selezionati.
+#### Es
+```cli
+user has subreddit? (y/n)
+sub-reddit:
+1. sub1
+2. sub2
+3. sub3
+4. ...
+
+sub-reddit id
+1
+
+user has subreddit? (y/n)
+sub-reddit:
+2. sub2
+3. sub3
+4. ...
+
+[...]
+```
