@@ -249,3 +249,16 @@ sub-reddit:
 
 [...]
 ```
+
+## Day 5
+### Fase 1
+In accordo con l'esercizio in live modificare il `findById` dell'`Utente` per far in modo che vengano caricati tutti i **SubReddit** associati (`Hibernate.inizialize(...)`).
+Modificare poi il `toString()` dell'`Utente` in modo che vengano stampati tutti i **SubReddit** associati. 
+
+> [!attention] attenzione ai loop tra i vari `toString()`
+
+### Fase 2
+Testare ogni passaggio delle varie operazioni di `CRUD` e verificare che non vi siano errori di nessun tipo, eventualmente testando anche i casi limite.
+
+### Fase 3
+Prepararsi in vista dell'esercizio di **lunedì**
