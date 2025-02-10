@@ -2,39 +2,31 @@
 ## Repo
 `gen-jaita138-springboot-hibernate-gruppi-1`
 ## Gruppi
-### **Gruppo 1:**  
-- Marco Abbondanza  
-- Leonardo Boscolo Boscoletto  
-- ~~Daniel Di Giacomo~~  
-- Claudia Iuliano  
-- Pierpaolo Valentini
-
-### **Gruppo 2:**  
-- Dominic Bejan Piser  
-- Simone Canu  
-- Giovanni Di Guida  
-- Luigi Matrone  
-- Angela Spierto  
-
-### **Gruppo 3:**  
-- Fioravante Bifulco  
-- Catalin Ionut Ciobanu  
-- Riccardo Di Niccolo  
-- Eleonora Monterisi   
-
-### **Gruppo 4:**  
-- Luca Gallotta  
-- Nicolo' Giuliani  
-- Alexander Gabriel Ibarra Gomez  
-- Alisse Arianna Rodriguez Valenza  
-- Jose Gabriel Teran Condori
-
-### **Gruppo 5:**  
-- Domenico Stornaiuolo  
-- Luigi Matrone  
-- Riccardo Di Niccolo  
-- Eleonora Monterisi  
-
+### Gruppo 1  
+1. ==Marco Abbondanza==
+2. Fioravante Bifulco  
+3. ~~Daniel Di Giacomo~~  
+4. Claudia Iuliano  
+### Gruppo 2  
+5. Dominic Bejan Piser  
+6. Leonardo Boscolo Boscoletto  
+7. Giovanni Di Guida  
+8. Luigi Matrone  
+### Gruppo 3  
+9. Simone Canu  
+10. Catalin Ionut Ciobanu  
+11. Luca Gallotta  
+12. Eleonora Monterisi  
+### Gruppo 4  
+13. Riccardo Di Niccolo  
+14. Nicolo' Giuliani  
+15. Alexander Gabriel Ibarra Gomez  
+16. Alisse Arianna Rodriguez Valenza  
+### Gruppo 5  
+17. Jose Gabriel Teran Condori  
+18. Angela Spierto  
+19. Pierpaolo Valentini  
+20. Domenico Stornaiuolo  
 ## Database
 ```mermaid
 erDiagram
