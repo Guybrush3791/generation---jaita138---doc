@@ -1,32 +1,3 @@
-# Esercitazione per gruppi
-## Repo
-`gen-jaita138-springboot-hibernate-gruppi-1`
-## Gruppi
-### Gruppo 1 : OK
-1. ==Marco Abbondanza==
-2. Fioravante Bifulco  
-3. Daniel Di Giacomo
-4. Claudia Iuliano  
-### Gruppo 2 : OK
-1. Dominic Bejan Piser  
-2. Leonardo Boscolo Boscoletto  
-3. Giovanni Di Guida  
-4. ==Luigi Matrone==  
-### Gruppo 3 : OK
-1. ==Simone Canu==  
-2. Catalin Ionut Ciobanu  
-3. Luca Gallotta  
-4. Eleonora Monterisi  
-### Gruppo 4 : OK
-1. Riccardo Di Niccolo  
-2. ==Nicolo' Giuliani==  
-3. Alexander Gabriel Ibarra Gomez  
-4. Alisse Arianna Rodriguez Valenza  
-### Gruppo 5 : OK
-1. Jose Gabriel Teran Condori  
-2. Angela Spierto  
-3. Pierpaolo Valentini  
-4. ==Domenico Stornaiuolo==  
 ## Database
 ```mermaid
 erDiagram
@@ -38,16 +9,40 @@ erDiagram
 - per ogni **Autore** esistono uno o più **Libri**
 - per ogni **Genere** esistono zero o più **Libri**
 
+### ER Normalizzato
+```mermaid
+erDiagram
+    LIBRO ||--o{ AUTORE : "scritto da"
+    LIBRO ||--o{ LIBRO_GENERE: "appartiene al"
+    GENERE ||--o{ LIBRO_GENERE: "contiene"
+```
+
 > [!note] Esempio
 > -  Il libro _"Il Signore degli Anelli"_ (Autore: J.R.R. Tolkien) può appartenere ai generi _"Fantasy"_ e _"Avventura"_
 > - L'autore _"Agatha Christie"_ ha molti libri, ciascuno con un solo genere (es: _"Giallo"_).
 ### Descrizione delle tabelle
 #### Libro
 Ogni libro deve contenere il `titolo`, l'`anno di pubblicazione` e l'`ISBN`.
+##### Colonne effettive:
+- id : Long : BigInteger : PK
+- title : String : VARCHAR(64)
+- year_pub : integer : integer
+- isbn : string : varchar(13)
+
 #### Autore
 Ogni autore deve contenere `nome`, `cognome` e `nazionalità`.
+##### Colonne effettive:
+- id : Long : BigInteger : PK
+- name : String : VARCHAR(64)
+- surname : String : VARCHAR(64)
+- nationality : String : VARCHAR(2)
+
 #### Genere
 Ogni genere è definito unicamente dal `nome`.
+
+##### Colonne effettive:
+- id : Long : BigInteger : PK
+- name : String : VARCHAR(32)
 
 ## CLI Menu
 Il menu a riga di comando si occupa di interagire con l'utente e definire le varie operazioni possibili sulla base dati. Le possibili operazioni svolte dall'utente devono includere:
