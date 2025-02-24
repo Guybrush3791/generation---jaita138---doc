@@ -24,6 +24,15 @@ Testare la rotta attraverso `PostMan` (o programma equivalente).
 ### Front-end
 Al progetto precedente sviluppato in `Vue.JS` aggiungere un `Component` che scarichi la lista di libri presenti in `DB` attraverso il `back-end` in `Spring-Boot` e stampi la lista in pagina (front-end non rilevante).
 
-> [!note] Attenzione
+> [!attention] Attenzione
 > Il **front-end** non e' abilitato ad accedere ai servizi del **back-end** in mancanza della direttiva `@CrossOrigin` di `Java` a livello di classe del `Controller`
 
+> [!attention] Attenzione
+> Per accedere alla libereria `axios` è necessario installarla attraverso `yarn`
+> ```sh
+> yarn add axios
+> ```
+> Una volta installata la libreria è necessario riavviare il comando per avviare l'esecuzione
+> ```sh
+> yarn dev
+> ```
