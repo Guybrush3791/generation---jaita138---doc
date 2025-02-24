@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Days/Day 11/Livecoding.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -163,7 +163,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "94a314ab9c9734fc",
+  "active": "bbed4bfddba8cfa8",
   "lastOpenFiles": [
     "Days/Day 10/Springboot + Hibernate + CommandLineRunner.md",
     "Days/Day 11/Livecoding.md",

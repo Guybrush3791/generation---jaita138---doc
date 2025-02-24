@@ -4,8 +4,15 @@ Come progetto back-end, utilizzeremo la continuazione dell'[[Springboot + Hibern
 ## Repos
 ### Back-end
 [Springboot project GitHub Repository](https://github.com/Guybrush3791/gen-jaita138-springboot-controller-1)
+> [!note] In particolare
+> Vedi file 
+> - `org.generation.jaita138.demo11.controller.BookController`
 ### Front-end
 [Vue.JS + axios project Repository](https://github.com/Guybrush3791/gen-jaita138-vuejs-1)
+> [!note] In particolare
+> Vedi file 
+> - `@/views/HomeView.vue` 
+> - `@/components/BookListComponent.vue`
 ## Day 1
 ### Back-end
 Recuperando il proprio progetto sviluppato in gruppo (vedi [[Springboot + Hibernate + CommandLineRunner|Esercizio Day 10]]) aggiungere un semplice `Controller` per la gestione dei libri da parte del progetto `Vue.JS`.
