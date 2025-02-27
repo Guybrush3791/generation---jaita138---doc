@@ -49,7 +49,73 @@ Aggiungere un ulteriore bottone che permetta di far scomparire la visualizzazion
 ### Bonus
 Tentare di inviare effettivamente il JSON risultate attraverso un `axios.post(...)` al `back-end` e testare il corretto funzionamento della comunicazione loggando i risultato o salvando effettivamente i dati in tabella (**very hard**).
 ## Day 3
-## Back-end
+### Back-end
 Al progetto `SpringBoot`, aggiungere la rotta con metodo `Post` per il salvataggio di un nuovo libro.
+#### Bonus: Validation
+Aggiungere la dipendenza nel `pom.xml`
+```xml
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+```
+> [!attention] È NECESSARIO RIAVVIARE IL PROGETTO
+
+Aggiungere delle regole di validazione alla classe `Book`
+```java
+@Entity
+public class Book {
+
+   // ...
+
+    @NotNull(message = "Title is required")
+    @NotBlank(message = "Title is required")
+    @Column(length = 64)
+    private String title;
+
+	// ...
+}
+```
+Annotare il `@RequestBody Book` come `@Valid`
+```java
+@RestController
+@CrossOrigin("http://localhost:5173/")
+@RequestMapping("/api/v1/book")
+public class BookController {
+
+    // ...
+
+    @PostMapping
+    public ResponseEntity<Book> createBook(
+            @Valid @RequestBody Book book) {
+
+	// ...
+}
+```
+Testare la funzionalita' tramite `PostMan` tramite un oggetto che viole una o più delle regole di validazione (ad esempio il titolo vuoto)
+```json
+{
+  "genres": [
+    {"id": 1}
+  ],
+  "title": "",
+  "isbn": "12345",
+  "year_pub": "2025",
+  "author": {"id": 1}
+}
+```
+Il risultato atteso e' un errore in `PostMan`
+```json
+{
+    "timestamp": "2025-02-27T15:59:45.786+00:00",
+    "status": 400,
+    "error": "Bad Request",
+    "path": "/api/v1/book"
+}
+```
+Ed un `log` nel terminale di `SpringBoot` riportante la regola violata
+```sh
+Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.generation.jaita138.demo11.db.entity.Book> org.generation.jaita138.demo11.controller.BookController.createBook(org.generation.jaita138.demo11.db.entity.Book): [Field error in object 'book' on field 'title': rejected value []; codes [NotBlank.book.title,NotBlank.title,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [book.title,title]; arguments []; default message [title]]; default message [Title is required]] ]
+```
 ### Front-end
 Al progetto `VueJS`, dopo aver aggiunto il `form`, aggiungere la chiamata in `axios` per l'invio dei dati del nuovo `Book` al back-end e scaricando e mostrando i dati di tutti i libri aggiornati.
