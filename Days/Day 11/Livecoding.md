@@ -48,3 +48,8 @@ Aggiungere un ulteriore bottone che permetta di far scomparire la visualizzazion
 
 ### Bonus
 Tentare di inviare effettivamente il JSON risultate attraverso un `axios.post(...)` al `back-end` e testare il corretto funzionamento della comunicazione loggando i risultato o salvando effettivamente i dati in tabella (**very hard**).
+## Day 3
+## Back-end
+Al progetto `SpringBoot`, aggiungere la rotta con metodo `Post` per il salvataggio di un nuovo libro.
+### Front-end
+Al progetto `VueJS`, dopo aver aggiunto il `form`, aggiungere la chiamata in `axios` per l'invio dei dati del nuovo `Book` al back-end e scaricando e mostrando i dati di tutti i libri aggiornati.
