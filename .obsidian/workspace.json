@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Days/Day 11/Livecoding.md",
+                "file": "Days/Day 12/AI Live Coding.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Livecoding"
+              "title": "AI Live Coding"
             }
           }
         ]
@@ -165,8 +165,10 @@
   },
   "active": "bbed4bfddba8cfa8",
   "lastOpenFiles": [
-    "Untitled.md",
     "Days/Day 11/Livecoding.md",
+    "Days/Day 12/AI Live Coding.md",
+    "Days/Day 12",
+    "Untitled.md",
     "Days/Day 10/Springboot + Hibernate + CommandLineRunner.md",
     "Days/Day 11",
     "Days/Day 9/Esercitazione SpringBoot + Hibernate.md",
@@ -193,7 +195,6 @@
     "Repos",
     "__assets/pdf/gen-jaita138-tipi-di-dato-1 - es 3.pdf",
     "Days/Day 5",
-    "Days/Day 4",
     "Days/Day 1/Esercizi.md",
     "Days/Day 1/Tipi di Dato.md",
     "Tutorials/GitHub Desktop.md",
@@ -209,7 +210,6 @@
     "Tutorials/Markdown/Mermaid/Timeline.md",
     "Tutorials/Markdown/Mermaid/State diagram.md",
     "Tutorials/Markdown/Mermaid/Sequence Diagram.md",
-    "Tutorials/Markdown/Mermaid/Pie.md",
-    "Tutorials/Markdown/Mermaid/Git.md"
+    "Tutorials/Markdown/Mermaid/Pie.md"
   ]
 }

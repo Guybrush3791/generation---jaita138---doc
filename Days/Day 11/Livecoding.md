@@ -68,8 +68,8 @@ public class Book {
 
    // ...
 
-    @NotNull(message = "Title is required")
-    @NotBlank(message = "Title is required")
+    @NotNull(message = "Title is required!")
+    @NotBlank(message = "Title is required!")
     @Column(length = 64)
     private String title;
 
@@ -115,7 +115,7 @@ Il risultato atteso e' un errore in `PostMan`
 ```
 Ed un `log` nel terminale di `SpringBoot` riportante la regola violata
 ```sh
-Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.generation.jaita138.demo11.db.entity.Book> org.generation.jaita138.demo11.controller.BookController.createBook(org.generation.jaita138.demo11.db.entity.Book): [Field error in object 'book' on field 'title': rejected value []; codes [NotBlank.book.title,NotBlank.title,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [book.title,title]; arguments []; default message [title]]; default message [Title is required]] ]
+Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.generation.jaita138.demo11.db.entity.Book> org.generation.jaita138.demo11.controller.BookController.createBook(org.generation.jaita138.demo11.db.entity.Book): [Field error in object 'book' on field 'title': rejected value []; codes [NotBlank.book.title,NotBlank.title,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [book.title,title]; arguments []; default message [title]]; default message [Title is required!]] ]
 ```
 ### Front-end
 Al progetto `VueJS`, dopo aver aggiunto il `form`, aggiungere la chiamata in `axios` per l'invio dei dati del nuovo `Book` al back-end e scaricando e mostrando i dati di tutti i libri aggiornati.
